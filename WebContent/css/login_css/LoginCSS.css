@@ -1,0 +1,224 @@
+@font-face {
+	font-family: "daum";
+	src:
+		url("../Daum_Regular.ttf")
+		format("truetype");
+	font-weight: normal;
+	font-style: normal
+}
+#Login_html
+{
+	width:100%;
+	height:100%;
+	background-image:url(../../img/login_img/bg2.png);
+	background-size:cover;
+}
+*
+{
+	margin:0 auto;
+	font-family: "daum";
+}
+#Login_container
+{
+	
+}
+.form-signin
+{
+	width:300px;
+	height:460px;
+	border:1px;
+	border-radius:8px;
+	background-color:#eee ;
+	text-align:center;
+	margin-top:300px;
+}
+#Login_h2
+{
+	height:5px;
+	clear:both;
+	padding:20px 0 30px 0;
+	background-color:white;
+	border-radius:8px 8px 0 0;
+}
+#Login_span_header
+{
+	
+	text-align: center;
+	padding: 16px 0;
+	line-height: 16px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #555;
+	cursor: default;
+	font-size:1.2em;
+	font-weight:bold;
+	font-family: "daum";
+}
+#Login_div_email
+{
+	padding:50px 0px 0px 0px;
+}
+#Login_div_password
+{
+	padding:15px 0px 15px 0px;
+}
+#Login_input_email
+{
+	padding:11px 5px 11px 5px;
+}
+#Login_input_password
+{
+	padding:11px 5px 11px 5px;
+}
+#Login_div_btn1
+{
+	padding:2px 0px 10px 2px;
+	margin-top:20px;
+}
+#Login_div_btn2
+{
+	padding:2px 0px 10px 2px;
+}
+#Login_div_btn3
+{
+	padding:2px 0px 10px 2px;
+}
+#Login_email_submit
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "daum";
+	font-size:13px;
+	font-weight:bold;
+	padding:12px 37px;
+	text-decoration:none;
+}
+#Login_email_submit:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+#Login_email_submit:active
+{
+	position:relative;
+	top:1px;
+}
+#Login_skip
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "daum";
+	font-size:13px;
+	font-weight:bold;
+	padding:10px 60px;
+	text-decoration:none;
+}
+#Login_skip:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+}
+#Login_skip:active
+{
+	position:relative;
+	top:1px;
+}
+#Login_facebook_button
+ {
+	-moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));
+	background:-moz-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-o-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:-ms-linear-gradient(top, #637aad 5%, #5972a7 100%);
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "daum";
+	font-size:13px;
+	font-weight:bold;
+	padding:17px 35px;
+	text-decoration:none;
+}
+#Login_facebook_button:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
+	background:-moz-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-webkit-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-o-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:-ms-linear-gradient(top, #5972a7 5%, #637aad 100%);
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
+	background-color:#5972a7;
+}
+#Login_facebook_button:active
+{
+	position:relative;
+	top:1px;
+}
+#Login_div_textBtn
+{
+	margin-top:15px;
+}
+#Login_passwordSearch
+{
+	font-size:12px;
+	color:gray;
+	font-family: "daum";
+}
+#Login_membership
+{
+	font-size:12px;
+	color:gray;
+	font-family: "daum";
+}
+#Login_span
+{
+	font-size:12px;
+	color:gray;
+	font-family: "daum";
+}

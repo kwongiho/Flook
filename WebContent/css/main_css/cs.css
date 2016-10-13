@@ -1,0 +1,805 @@
+@font-face {
+	font-family: "daum";
+	src: url("../Daum_Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal
+}
+.main_body_content{
+	width: 1380px;
+	height: 635px;
+	margin: 0 auto;
+	text-align: center;
+    background-color: rgba(248, 245, 239, 0.7);
+	padding: 58px;
+	border:1px ;
+	border-radius:7px;
+	margin-bottom:20px;
+}
+
+.header_psh {
+	
+}
+.selectSituation,.selectMood
+{
+	width:300px;
+	height:240px;
+	display:inline;
+}
+.main_psh {
+	text-align: center;
+}
+
+#main_toDay_header {
+	width: 250px;
+	height: 510px;
+	float: left;
+	margin: 10px;
+	background-image: url("../../img/main_img/todayRecipe.png");
+	background-size:cover;
+}
+#main_situation_body
+{
+	width: 250px;
+	height: 500px;
+	float: left;
+	margin: 10px;
+	background-image: url("../../img/main_img/situationRecipe.png");
+	background-size:cover;
+}
+#main_mood_body
+{
+	width: 250px;
+	height: 500px;
+	float: left;
+	margin: 10px;
+	background-image: url("../../img/main_img/moodRecipe.png");
+	background-size:cover;
+}
+#main_body_body {
+	width: 400px;
+	height: 100%;
+	display: inline;
+}
+
+#main_body_content2 {
+	
+}
+
+#main_body_content3 {
+	
+}
+
+.view {
+	width: 300px;
+	height: 240px;
+	margin: 10px;
+	float: left;
+	border: 5px solid #fff;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	-webkit-box-shadow: 1px 1px 2px #e6e6e6;
+	-moz-box-shadow: 1px 1px 2px #e6e6e6;
+	box-shadow: 1px 1px 2px #e6e6e6;
+	cursor: default;
+	background: #fff url(../images/bgimg.jpg) no-repeat center center;
+}
+
+.view .mask, .view .content {
+	width: 300px;
+	height: 240px;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+.main_body_category_title
+{
+	text-align: center;
+	padding: 16px 0;
+	line-height: 16px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	cursor: default;
+	font-size:1.2em;
+	font-weight:bold;
+	font-family:daum;
+	margin-top: 200px;
+}
+/*==================================================================================  */
+/* .main_banner_location{
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	width:600px; height:400px;
+} */
+/* .main_banner{width:2400px; position:relative;} */
+/* .main_banner_slider{float:left; width:100%; height:400px;} */
+.main_banner_slider {
+	background-color: red;
+}
+/* .control_panel{
+	position:absolute; top:380px;
+	left:50%;height:13px;
+	overflow:hidden;
+}
+.control_button{
+	width:12px; height:46px;
+	position:relative;
+	float:left;cursor:pointer;
+	background:url("image/banner/point_button.png");
+	
+} */
+/* .main_banner_slider {
+	width:100%;
+	height:690px;
+} */
+
+/* #main_banner_location_id {
+	margin-top:2%;
+	clear:both;
+	width:100%;
+	
+} */
+/* .control_button:hover{top:-16px;} */
+/* .control_button.active{top:-31px;} */
+/**/
+/*---------------오늘의 추천 레시피 시작 --------------------*/
+* {
+	font-family:daum;
+}
+
+.main_li /*모두에게 적용되는것.*/ {
+	height: 525px;
+	/* background-color:#d5d5dd;
+	border-radius:30px; */
+
+	/* float:right; */
+}
+
+#main_today_recommend {
+	
+}
+
+.main_today_recommend_div {
+	
+}
+
+#main_today_recomment_title {
+	float: left;
+	/* width:40%; */
+	/* height:20%; */
+}
+
+#main_today_recomment_title1 {
+	width: 300px;
+	margin-right: 5px;
+}
+
+#main_today_recomment_title1, #main_today_recomment_image1 {
+	border-radius: 10px;
+}
+
+.main_imageChange {
+	float: right;
+}
+
+#main_today_recomment_main {
+	
+}
+
+#main_today_recomment_image1 {
+	width: 410px;
+	float: left;
+}
+
+#main_today_recomment_sub {
+	width: 710px;
+}
+
+.main_today_image, .main_feeling_image, .main_situation_image {
+	width: 350px;
+	height: 350px;
+	float: left;
+	margin: 3.5px;
+	border-radius: 15px;
+}
+/*--------------------------------오늘의 추천 레시피 종료.-----------------------------*/
+/*--------------------------------- 기분별 레시피 시작 -------------------------------*/
+.main_feeling_recommend_div, .main_situation_recommend_div {
+	width: 244px;
+}
+
+/* .main_feeling_image {
+	width:350px;
+	height:350px;
+	float:left;
+	margin:3.5px;
+	border-radius:15px;
+} */
+/*-----------------------------기분별 종료-----------------------*/
+/*------------------------------상황별-------------------------*/
+/* .main_situation_recommend_div {
+	display:inline;
+	height:720px;	
+} main_feeling_recommend_div 이랑 합쳐짐.*/
+/* .main_situation_image {
+	width:350px;
+	height:350px;
+	float:left;
+	margin:3.5px;
+	border-radius:15px;
+} */
+/*-----------------------------------------------------------*/
+/*-------------------------------계절별-------------------------*/
+.main_seasonWeather_recommend_div {
+	
+}
+
+.main_seasonWeather_image {
+	/* --------------------------------------------------- */
+	width: 350px;
+	height: 350px;
+	float: left;
+	margin: 3.5px;
+	border-radius: 15px;
+}
+
+#main_seasonWeather_recomment_image1 {
+	width: 244px;
+	float: left;
+}
+/*--------------------------------------------------------*/
+* {
+	margin: 0 auto;
+}
+
+.main_banner {
+	clear: both;
+	width: 100%;
+	height: 529px;
+}
+
+.carousel-inner {
+	height: 529px;
+}
+
+#main_header {
+	text-align: center;
+	padding-top: 0px;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0px;
+}
+
+#main_body_container {
+	padding-top: 80px;
+	background-color: white;
+    height: 2200px;
+}
+
+#main_body {
+	margin: 0 auto;
+	display: inline-none;
+	width: 1440px;
+}
+
+.main_header_icon {
+	clear: both;
+	margin-top: 20px;
+	width: 30px;
+	height: 30px;
+}
+
+#main_logo {
+	border-radius: 0px;
+	width: 150px;
+	padding-top: 10px;
+}
+
+#index_div {
+	border: 1px solid;
+}
+
+#index_h1 {
+	color: lightblue;
+}
+
+li {
+	list-style: none;
+}
+/* li div {
+	display:inline;
+	height:720px;
+} */
+/*더보기*/
+.main_moreSee {
+	clear: both;
+	display: block;
+	text-align: right;
+	/* background-color:lightblue; */
+	padding: 15px 0px 15px 0px;
+}
+
+.main_moreSee_li {
+	border: 0px;
+}
+/*----today end------*/
+/*banner*/
+.home-ad {
+	position: fixed;
+	right: 20px;
+	top: 200px;
+	border: 1px solid #f2f2f2;
+	background: rgb(255, 255, 255);
+	border-radius: 0;
+	z-index: 9999;
+}
+
+.home-ad .close {
+	float: right;
+	color: #FFF;
+	background: #6B6B6B;
+	width: 20px;
+	height: 20px;
+	line-height: 16px;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	margin-bottom: 5px;
+}
+
+.home-ad div#carbonads {
+	padding: 10px;
+	max-width: 150px;
+}
+
+.home-ad div#carbonads a.carbon-img {
+	display: inline-block;
+	float: left;
+}
+
+.home-ad div#carbonads .carbon-wrap:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.home-ad div#carbonads .carbon-text {
+	font-size: 12px;
+	text-align: left;
+	color: #333;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+.home-ad div#carbonads .carbon-text:hover {
+	text-decoration: none;
+}
+
+.home-ad div#carbonads .carbon-poweredby {
+	font-size: 75%;
+	color: #bebebe;
+}
+/*banner end*/
+/*-----feeling-------*/
+#main_feeling_recommend_title {
+	display: inline;
+}
+
+#main_feeling_recomment_sub {
+	display: inline;
+	float: right;
+	width: 79%;
+	height: 20%;
+}
+/*----------situation------------------*/
+#main_situation_recomment_sub {
+	display: inline;
+	float: right;
+	width: 79%;
+	height: 20%;
+}
+/*-----------season---------------*/
+#main_seasonWeather_recomment_sub {
+	display: inline;
+	/* float:left; */
+	width: 79%;
+	height: 20%;
+}
+/*-------------all---------------*/
+.main_rightButton_ {
+	float: right;
+	margin-top: 23%;
+	width: 50px;
+	height: 50px;
+}
+
+.main_imageChange:HOVER {
+	background-color: #aa000000;
+}
+
+/*-----네비바-------------------------------------------------------*/
+#main_container {
+	margin-bottom: 15px;
+	width: 100%; /* 박세훈 */
+}
+
+#main_kindof, #main_imcooker {
+	margin-left: 50px;
+	color: white;
+}
+
+#flookNav_search_form {
+	margin: 0px 200px 0px 200px;
+}
+
+#flookNav_bell, #flookNav_cart, #main_newspid, #main_profile {
+	margin-left: 35px;
+}
+
+#dLabel1, #dLabel2 {
+	color: white;
+}
+
+#main_kindof {
+	margin-left: 100px;
+}
+
+#main_search {
+	width: 20%;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	padding: 6px 10px 6px 30px;
+	height: 18px;
+	width: 220px;
+	margin: 0;
+	color: #fff;
+	border: 0 none;
+	background-color: #c8c8c8;
+	font-size: 15px;
+	line-height: 20px;
+	box-sizing: content-box;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	behavior: url(/PIE.htc);
+	position: relative;
+	-webkit-appearance: none
+}
+
+#main_search::-webkit-search-cancel-button {
+	-webkit-appearance: none
+}
+
+#main_search:focus {
+	box-shadow: none;
+	outline: 0;
+	border: 1px solid #c8c8c8;
+	color: #403f4e;
+	background-color: #fff
+}
+
+#main_search:focus+#search-icon {
+	background-position: 0 -254px
+}
+
+#main_search {
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: #fff
+}
+
+#main_search:focus+#search-icon {
+	background:
+		url(https://d12hfz37g51hrt.cloudfront.net/assets/header-sdd140c72a7-ce47c73d8957ca931e0719fec7d47f49.png)
+		no-repeat
+}
+
+.main_flook_recipe_btn {
+	font-size: 1.9em;
+} /* 
+----------------정윤_회원가입
+*{
+	margin : 0;
+	padding : 0;
+}
+
+#join_table{
+	text-align:center;
+	margin:0 auto;
+	line-alignment: center;
+}
+
+#profile_header_tb{
+	text-align: center;
+	margin:0 auto;
+	padding:65px;
+}
+
+#profile_header_tb tr td{
+	width:200px;
+	color: white;
+	font-weight: bold;
+}
+
+#profile_profileImg{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile_menu_table{
+	text-align:center;
+	margin:0 auto;
+	font-weight: bold;
+	color: #585858;
+}
+
+#profile_content{
+	height:3em;
+	background-color: #FFFFCC;
+}
+
+.profile_menuTb tr td{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#profile_menuTb2{
+	text-align:right;
+}
+
+#profile_menuTb2 tr td{
+	padding-right: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#profile_modifyBtn{
+	text-align: right;
+	margin-bottom: 50px;
+}
+
+#profile_simple div{
+	text-align:right;
+	margin-right:50px;
+}
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.profile_menuTb tr td:before{
+    background-color: blue;
+}
+
+.profile_menuTb tr td a{
+	padding:13px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: orange;
+}
+
+#profile_simple{
+	background-image: url("image/816130-fruit-wallpaper (2).jpg");
+}
+.profile_myWrite_recipe {
+	
+	width:300px;
+	height:200px;
+	
+}
+#profile_my_write_recipe_area {
+	width:1680px;
+	height:430px;
+	padding:0;
+	margin:0 auto;
+	
+	
+	
+} */
+/*--------------------------------------------------------*/
+/*-------------------recipe see--------------------*/
+#recipe_see {
+	/* margin:20%;
+	margin-top:5%;
+	background-color:lightblue; */
+	height: 100%;
+}
+
+#recipe_complete {
+	height: 10%;
+}
+/*내가 작성한 레시피 목록.*/
+#recipe_main_img {
+	width: 100%;
+}
+
+#recipe_name_see {
+	display: inline-block;
+	text-align: center;
+	padding-left: 10%;
+}
+
+#recipe_name {
+	text-align: center;
+}
+
+.recipe_categori {
+	padding: 5px;
+}
+
+#recipe_description_textarea_see
+,
+#recipe_description_title_see
+,
+{
+width
+
+
+
+
+:
+
+
+
+
+94%;
+margin-left
+
+
+
+
+:
+
+
+ 
+
+
+3%;
+margin-right
+
+
+
+
+:
+
+
+ 
+
+
+3%;
+resize
+
+
+
+
+:none
+
+
+
+
+;
+}
+#recipe_infomation_description_see, #recipe_name_see,
+	#recipe_use_ingredient {
+	margin: 2%;
+}
+
+.block {
+	display: block;
+}
+
+.recipe_cooking_course_img {
+	width: 40%;
+	height: 40%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#recipe_cooking_course {
+	margin: 3%;
+}
+
+.recipe_cooking_course_infomation {
+	width: 50%;
+	height: 180px;
+	vertical-align: top;
+}
+
+.recipe_see_button {
+	clear: both;
+	width: 30px;
+	height: 30px;
+}
+
+#tempBtn {
+	/* background-color: lightblue; */
+	
+}
+
+#ttt {
+	background-color: lightblue;
+}
+/*-----------------toastMessage------------------------*/
+
+/*--------------------toastmessage end--------------------*/
+/*test*/
+#main_feeling_recommend_change {
+	display: none;
+}
+
+#recipe_userImg {
+	width: 150px;
+	height: 150px;
+}

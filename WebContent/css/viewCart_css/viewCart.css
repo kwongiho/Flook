@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#viewCart_cart {
+	width: 400px;
+	height: 200px;
+	overflow: auto;
+	list-style-type: square;
+}
+.viewCart_ingredient_img{
+	 width: 50px;
+}
+.viewCart_marker_img,.viewCart_delete_img{
+	width:30px;
+}
+.viewCart_ingredient,.viewCart_marker_delete{
+	display: inline-block;
+}

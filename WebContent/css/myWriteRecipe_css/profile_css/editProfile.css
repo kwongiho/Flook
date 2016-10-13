@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+.facebookswitch {
+    position: relative; width: 88px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    display:inline;
+}
+.facebookswitch-checkbox {
+    display: none;
+}
+.facebookswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.facebookswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.facebookswitch-inner:before, .facebookswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.facebookswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #17ABE6; color: #FFFFFF;
+}
+.facebookswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.facebookswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 54px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.facebookswitch-checkbox:checked + .facebookswitch-label .facebookswitch-inner {
+    margin-left: 0;
+}
+.facebookswitch-checkbox:checked + .facebookswitch-label .facebookswitch-switch {
+    right: 0px; 
+}
+@CHARSET "UTF-8";
+.instagramswitch {
+    position: relative; width: 88px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.instagramswitch-checkbox {
+    display: none;
+}
+.instagramswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.instagramswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.instagramswitch-inner:before, .instagramswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.instagramswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #17ABE6; color: #FFFFFF;
+}
+.instagramswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.instagramswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 54px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.instagramswitch-checkbox:checked + .instagramswitch-label .instagramswitch-inner {
+    margin-left: 0;
+}
+.instagramswitch-checkbox:checked + .instagramswitch-label .instagramswitch-switch {
+    right: 0px; 
+}
+.profile_div_facebook
+{
+	display:inline;
+}

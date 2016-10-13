@@ -1,0 +1,655 @@
+@font-face {
+	font-family: "daum";
+	src: url("../Daum_Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal
+}
+@CHARSET "UTF-8";
+*
+{
+	font-family:daum;
+}
+#myWriteRecipe_html {
+	width: 100%;
+	height: 100%;
+}
+
+/* 전상우부분 바디 */
+.body_jsw {
+	background-color: #f2f2f2;
+	width: 1300px;
+	margin: 0 auto;
+}
+
+/*전상우부분 헤더  */
+#header_jsw {
+	clear: both;
+	background-color: #77cdb4;
+	font-family:daum;
+	color: #FFF;
+	font-size: 2.3em;
+	text-align: center;
+}
+
+.view {
+	width: 300px;
+	height: 240px;
+	margin: 15px;
+	float: left;
+	border: 5px solid #fff;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	-webkit-box-shadow: 1px 1px 2px #e6e6e6;
+	-moz-box-shadow: 1px 1px 2px #e6e6e6;
+	box-shadow: 1px 1px 2px #e6e6e6;
+	cursor: default;
+}
+
+.view .mask, .view .content {
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.view img {
+	display: block;
+	position: relative;
+}
+
+.view h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.8);
+	margin: 20px 0 0 0;
+}
+
+.view p {
+	font-size: 12px;
+	position: relative;
+	color: #fff;
+	padding: 10px 20px 20px;
+	text-align: center;
+}
+
+.view a.info {
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 14px;
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-box-shadow: 0 0 1px #000;
+	-moz-box-shadow: 0 0 1px #000;
+	box-shadow: 0 0 1px #000;
+}
+
+.view a.info: hover {
+	-webkit-box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
+.view-first img {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.view-first .mask {
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	background-color: rgba(219, 127, 8, 0.7);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	-o-transform: translateY(-100px);
+	-ms-transform: translateY(-100px);
+	transform: translateY(-100px);
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.view-first p {
+	-webkit-transform: translateY(100px);
+	-moz-transform: translateY(100px);
+	-o-transform: translateY(100px);
+	-ms-transform: translateY(100px);
+	transform: translateY(100px);
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.view-first:hover img {
+	-webkit-transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+}
+
+.view-first a.info {
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity = 0);
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover .mask {
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity = 100);
+	opacity: 1;
+}
+
+.view-first:hover h2, .view-first:hover p, .view-first:hover a.info {
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity = 100);
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.view-first:hover p {
+	-webkit-transition-delay: 0.1s;
+	-moz-transition-delay: 0.1s;
+	-o-transition-delay: 0.1s;
+	-ms-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.view-first:hover a.info {
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	-ms-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+#myWriteRecipe_container {
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+}
+
+#myWriteRecipe_content {
+	margin: auto;
+	width: 1600px;
+	hwight: 100%;
+	background-color: #eee;
+	padding: 90px 0 40px 0;
+	text-align: center;
+}
+
+#myWriteRecipe_elements {
+	margin: auto;
+	width: 1600px;
+	height: 1200px;
+	background-color: white;
+	border: 1px;
+	border-radius: 8px;
+	text-align: center;
+	padding: 0 40px 0 40px;
+}
+
+.main_jsw {
+	margin: auto;
+	text-align: center;
+	margin-left:90px;
+}
+
+@media ( min-width :768px) {
+	.check-modal {
+		width: 600px;
+		margin: 30px auto
+	}
+	.check-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+	}
+	.check-sm {
+		width: 300px
+	}
+}
+
+.check-modal {
+	position: relative;
+	width: auto;
+	margin: 10px
+}
+
+.check-content {
+	position: relative;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 6px;
+	outline: 0;
+	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+}
+
+.check-header {
+	min-height: 16.43px;
+	padding: 15px;
+	border-bottom: 1px solid #e5e5e5
+}
+
+.check-header .close {
+	margin-top: -2px
+}
+
+.check-title {
+	margin: 0;
+	line-height: 1.42857143
+}
+
+.check-body {
+	position: relative;
+	padding: 15px
+}
+
+.check-footer {
+	padding: 15px;
+	text-align: right;
+	border-top: 1px solid #e5e5e5
+}
+
+.check-footer .btn+.btn {
+	margin-bottom: 0;
+	margin-left: 5px
+}
+
+.check-footer .btn-group .btn+.btn {
+	margin-left: -1px
+}
+
+.check-footer .btn-block+.btn-block {
+	margin-left: 0
+}
+
+.check-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll
+}
+#myWriteRecipe_body
+{
+	text-align:center;
+}
+#myWriteRecipe_modal_yesBtn
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+}
+#myWriteRecipe_modal_yesBtn:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+#myWriteRecipe_modal_yesBtn:active
+{
+	position:relative;
+	top:1px;
+}
+#myWriteRecipe_modal_noBtn
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+	margin-left:5px;
+}
+#myWriteRecipe_modal_noBtn:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+}
+#myWriteRecipe_modal_noBtn:active
+{
+	position:relative;
+	top:1px;
+}
+#recipeDeleteBtn
+{
+	display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
+    margin-left:5px;
+}
+
+#recipeModifyBtn
+{
+	display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
+    margin-left:5px;
+    outline:none;
+}
+#recipe_modify_see
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+}
+#recipe_modify_see:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+#m#recipe_modify_see:active
+{
+	position:relative;
+	top:1px;
+}
+#recipe_delete_see
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+	margin-left:5px;
+}
+#recipe_delete_see:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+}
+#recipe_delete_see:active
+{
+	position:relative;
+	top:1px;
+}
+#detailRecipeModal
+{
+	font-family:daum;
+}
+#detailRecipeBackground
+{
+	background-color: #999;
+    background-color: rgba(51,51,51,0.5);
+    position: relative;
+    padding: 200px 0 90px;
+    z-index: 3;
+}
+#recipe_see_section1
+{
+	float:right;
+	width:333px;
+	text-align:center;
+	color: #7a7a7a;
+
+}
+#recipe_see_section2
+{
+	float:left;
+	width: 664px;
+	padding-top:50px;
+	background: #f8f8f8;
+}
+#recipe_name_see
+{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#testUserIdTag
+{
+	padding:0;
+}
+#recipe_ingredient_add_cart{
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	margin-bottom:20px;
+}
+#recipe_ingredient_add_cart:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+	margin-bottom:20px;
+}
+#recipe_ingredient_add_cart:active{
+	position:relative;
+	top:1px;
+}
+#recipe_ingredient_t
+{
+	
+}
+#recipe_use_ingredient
+{
+	border:1px solid #7a7a7a;
+	border-radius:3px;
+}
+#detailRecipe_modal{
+	background:url(../../img/myWriteRecipe_img/modal_background.png);
+	background-size:cover;
+	text-align: center;
+}
+
+#myDetailRecipeViewCloseBtn{
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	margin-top:20px;
+}
+#myDetailRecipeViewCloseBtn:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+#myDetailRecipeViewCloseBtn:active{
+	position:relative;
+	top:1px;
+}
+#recipe_ingredient_t
+{
+	
+}
+#recipe_see_section3
+{
+	background: #f8f8f8;
+}
+#myWriteRecipeView_footer
+{
+	both:clear;
+}
+#recipe_event
+{
+	margin:10px 0 10px 0;
+}
+#recipe_description_image
+{
+	margin-top:50px;
+	margin-left: 105px;
+}
+#recipe_userImg
+{
+	border-radius:50%;
+}

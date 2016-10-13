@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+
+/* 전상우부분 바디 */
+.body_jsw {
+	background-color: #f2f2f2;
+	width:1300px;
+	margin:0 auto;
+}
+
+/*전상우부분 헤더  */
+#header_jsw {
+	clear:both;
+	background-color: #77cdb4;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #FFF;
+	font-size: 2.3em;
+	text-align: center;
+}

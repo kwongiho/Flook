@@ -1,0 +1,310 @@
+@font-face {
+	font-family: "daum";
+	src: url("../Daum_Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal
+}
+*
+{
+	margin:0 auto;
+	font-family:daum;
+}
+#Write_html
+{
+	background-color:#eee;
+	width:100%;
+	height:100%;
+}
+#Write_body
+{
+	background-color:#eee;
+}
+#Write_container
+{
+}
+.Write_form
+{
+	width:1200px;
+	height:100%;
+}
+.write_element
+{
+	background-color:white;
+	margin-top:20px;
+	border:1px;
+	border-radius:8px;
+	margin-left:0;
+}
+#write_photo
+{
+	float:right;
+	margin-right:20px;
+}
+#Write_recipeName
+{
+	width:140px;
+}
+#write_input_recipeName
+{
+	height:35px;
+}
+#write_img_lock
+{
+	margin:0px 10px 0px 5px;
+}
+.write_select_option_private
+{
+	height:30px;
+	padding:20px;
+}
+#write_label_recipeDiscription
+{
+	vertical-align:top;
+	width:140px;
+}
+#write_input_recipeDiscription
+{
+	height:50px;
+}
+#write_input_tag
+{
+	height:35px;
+}
+#write_element4
+{
+	margin-bottom:20px;
+}
+#write_mainIngredient
+{
+	
+}
+#write_label_category
+{
+	width:140px;
+}
+#write_label_cookInfo
+{
+	width:140px;
+}
+#write_label_tag
+{
+	width:140px;
+}
+#write_name_scope
+{
+	padding:30px 0px 0px 50px;
+}
+#write_recipeDiscription
+{
+	padding:30px 0px 0px 50px;
+}
+#write_category
+{
+	padding:30px 0px 0px 50px;
+}
+#write_cookInfo
+{
+	padding:30px 0px 0px 50px;
+}
+#write_tag
+{
+	padding:30px 0px 30px 50px;
+}
+#write_mainIngredient
+{
+	padding:30px 0px 30px 50px;
+}
+#write_subIngredient
+{
+	padding:30px 0px 30px 50px;
+}
+#write_addMainIngredientButton,#write_addSubIngredientButton,#write_addRecipeButton{
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	margin:0px 0px 0px 200px;
+}
+#write_addMainIngredientButton,#write_addSubIngredientButton,#write_addRecipeButton:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+#write_addMainIngredientButton,#write_addSubIngredientButton,#write_addRecipeButton:active{
+	position:relative;
+	top:1px;
+}
+.write_modMainIngredientButton,.write_modSubIngredientButton,.write_modRecipeButton
+{
+		-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+.write_modMainIngredientButton,.write_modSubIngredientButton,.write_modRecipeButton:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;	
+}
+.write_modMainIngredientButton,.write_modSubIngredientButton,.write_modRecipeButton:active
+{
+	position:relative;
+	top:1px;
+}
+#write_addSubIngredientButton
+{
+	margin-bottom:30px;
+}
+#write_addRecipeButton
+{
+	margin-top:40px;
+	margin-bottom:30px;
+}
+.write_img_pic
+{
+	vertical-align:top;
+	margin:5px;
+}
+.write_textarea_step
+{
+	vertical-align:bottom;
+}
+
+li
+{
+	margin:5px;
+}
+#write_cooking_progress
+{
+	padding:30px 0px 0px 50px;
+}
+#write_confirm_cancel
+{
+    text-align: center;
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+#write_input_submit
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+	background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+	background-color:#ffc477;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:12px 37px;
+	text-decoration:none;
+}
+#write_input_submit:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+	background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+	background-color:#fb9e25;
+}
+#write_input_submit:active
+{
+	position:relative;
+	top:1px;
+}
+#write_input_cancel
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	box-shadow:inset 0px 1px 0px 0px #f7c3c0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:daum;
+	font-size:13px;
+	font-weight:bold;
+	padding:12px 37px;
+	text-decoration:none;
+}
+#write_input_cancel:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #fc8d83));
+	background:-moz-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-webkit-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-o-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:-ms-linear-gradient(top, #fc8d83 5%, #fc8d83 100%);
+	background:linear-gradient(to bottom, #fc8d83 5%, #fc8d83 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#fc8d83',GradientType=0);
+	background-color:#fc8d83;
+}
+#write_input_cancel:active
+{
+	position:relative;
+	top:1px;
+}
+#Write_form {
+	margin-left:20%;
+}
