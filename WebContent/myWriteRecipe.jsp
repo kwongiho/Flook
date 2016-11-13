@@ -27,6 +27,9 @@
 			$("#modify").submit();
 
 		});
+		$("#myWriteRecipe_elements").hover(function(){
+			window.scrollTo(300, 500);
+		});
 	});
 </script>
 </head>

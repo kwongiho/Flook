@@ -77,6 +77,7 @@ function insertScrap(recipeCode) {
          "recipeCode" : recipeCode
       },
       success : function(data) {
+    	  alert(recipeCode);
          alert("스크랩되었습니다.");
       }
    }); 

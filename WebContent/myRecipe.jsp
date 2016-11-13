@@ -25,7 +25,7 @@
    <script>
       var method = "볶음";
       var situation = "이유식";
-      var nation = "기타";
+      var nation = "한";
       var ingredient = "면류/떡류";
       var kindOf = "베이킹/떡";
       window.onload = function() {
@@ -113,7 +113,7 @@
       <form class="myRecipe_form">
          <div class="container">
             <div id="myRecipe_title">
-               <span id="myRecipe_span_title">Flook 요리사</span>
+               <span id="myRecipe_span_title">나도 요리사</span>
             </div>
             <div class="myRecipe_element" id="myRecipe_category">
                <div class="myRecipe_MainCategory">
@@ -146,22 +146,23 @@
                         id="">상황별</span></li>
                      <li class="active"><!-- <a data-toggle="tab" href="#home" class="myRecipe_situation">전체</a> --></li>
                      <li><a data-toggle="tab" href="#menu1" class="myRecipe_situation">일상</a></li>
-                     <li><a data-toggle="tab" href="#menu1" class="myRecipe_situation">손님접대</a></li>
-                     <li><a data-toggle="tab" href="#menu2" class="myRecipe_situation">이유식</a></li>
-                     <li><a data-toggle="tab" href="#menu3" class="myRecipe_situation">나들이</a></li>
-                     <li><a data-toggle="tab" href="#menu4" class="myRecipe_situation">간식</a></li>
-                     <li><a data-toggle="tab" href="#menu5" class="myRecipe_situation">초스피드</a></li>
-                     <li><a data-toggle="tab" href="#menu6" class="myRecipe_situation">술안주</a></li>
-                     <li><a data-toggle="tab" href="#menu7" class="myRecipe_situation">푸드 스타일링</a></li>
-                     <li><a data-toggle="tab" href="#menu8" class="myRecipe_situation">다이어트쿡</a></li>
-                     <li><a data-toggle="tab" href="#menu9" class="myRecipe_situation">영양식</a></li>
-                     <li><a data-toggle="tab" href="#menu10" class="myRecipe_situation">명절</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">야식</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">해장</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">아침식사</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">채식</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">야식</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">데이트</a></li>
+                     <li><a data-toggle="tab" href="#menu2" class="myRecipe_situation">손님접대</a></li>
+                     <li><a data-toggle="tab" href="#menu3" class="myRecipe_situation">이유식</a></li>
+                     <li><a data-toggle="tab" href="#menu4" class="myRecipe_situation">나들이</a></li>
+                     <li><a data-toggle="tab" href="#menu5" class="myRecipe_situation">간식</a></li>
+                     <li><a data-toggle="tab" href="#menu6" class="myRecipe_situation">초스피드</a></li>
+                     <li><a data-toggle="tab" href="#menu7" class="myRecipe_situation">술안주</a></li>
+                     <li><a data-toggle="tab" href="#menu8" class="myRecipe_situation">푸드스타일링</a></li>
+                     <li><a data-toggle="tab" href="#menu9" class="myRecipe_situation">다이어트</a></li>
+                     <li><a data-toggle="tab" href="#menu10" class="myRecipe_situation">영양식</a></li>
+                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_situation">명절</a></li>
+                     <li><a data-toggle="tab" href="#menu12" class="myRecipe_situation">야식</a></li>
+                     <li><a data-toggle="tab" href="#menu13" class="myRecipe_situation">해장</a></li>
+                     <li><a data-toggle="tab" href="#menu14" class="myRecipe_situation">아침식사</a></li>
+                     <li><a data-toggle="tab" href="#menu15" class="myRecipe_situation">채식</a></li>
+                     <li><a data-toggle="tab" href="#menu17" class="myRecipe_situation">데이트</a></li>
+                     <li><a data-toggle="tab" href="#menu18" class="myRecipe_situation">도시락</a></li>
+                     <li><a data-toggle="tab" href="#menu19" class="myRecipe_situation">기타</a></li>
                   </ul>
                </div>
                <div class="myRecipe_MainCategory">
@@ -185,35 +186,46 @@
                         id="">재료별</span></li>
                      <li class="active"><!-- <a data-toggle="tab" href="#home"
                         class="myRecipe_ingredient">전체</a> --></li>
-                     <li><a data-toggle="tab" href="#menu1" class="myRecipe_ingredient">육류</a></li>
-                     <li><a data-toggle="tab" href="#menu2" class="myRecipe_ingredient">해물류/건어물류</a></li>
-                     <li><a data-toggle="tab" href="#menu3" class="myRecipe_ingredient">곡류</a></li>
-                     <li><a data-toggle="tab" href="#menu4" class="myRecipe_ingredient">콩/견과류</a></li>
-                     <li><a data-toggle="tab" href="#menu5" class="myRecipe_ingredient">채소류</a></li>
-                     <li><a data-toggle="tab" href="#menu6" class="myRecipe_ingredient">버섯류</a></li>
-                     <li><a data-toggle="tab" href="#menu7" class="myRecipe_ingredient">빵류</a></li>
-                     <li><a data-toggle="tab" href="#menu8" class="myRecipe_ingredient">가공식품류</a></li>
-                     <li><a data-toggle="tab" href="#menu9" class="myRecipe_ingredient">면류/떡류</a></li>
-                     <li><a data-toggle="tab" href="#menu10" class="myRecipe_ingredient">과일류</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_ingredient">달걀/유제품</a></li>
-                     <li><a data-toggle="tab" href="#menu12" class="myRecipe_ingredient">기타</a></li>
+                        <li><a data-toggle="tab" href="#menu1" class="myRecipe_ingredient">소고기</a></li>
+                        <li><a data-toggle="tab" href="#menu2" class="myRecipe_ingredient">돼지고기</a></li>
+                        <li><a data-toggle="tab" href="#menu3" class="myRecipe_ingredient">닭고기</a></li>
+                        <li><a data-toggle="tab" href="#menu4" class="myRecipe_ingredient">육류</a></li>
+                        <li><a data-toggle="tab" href="#menu5" class="myRecipe_ingredient">채소류</a></li>
+                        <li><a data-toggle="tab" href="#menu6" class="myRecipe_ingredient">해물류</a></li>
+                        <li><a data-toggle="tab" href="#menu7" class="myRecipe_ingredient">달걀/유제품</a></li>
+                        <li><a data-toggle="tab" href="#menu8" class="myRecipe_ingredient">가공식품류</a></li>
+                        <li><a data-toggle="tab" href="#menu9" class="myRecipe_ingredient">쌀</a></li>
+                        <li><a data-toggle="tab" href="#menu10" class="myRecipe_ingredient">밀가루</a></li>
+                        <li><a data-toggle="tab" href="#menu11" class="myRecipe_ingredient">건어물류</a></li>
+                        <li><a data-toggle="tab" href="#menu12" class="myRecipe_ingredient">버섯류</a></li>
+                        <li><a data-toggle="tab" href="#menu13" class="myRecipe_ingredient">과일류</a></li>
+                        <li><a data-toggle="tab" href="#menu14" class="myRecipe_ingredient">콩/견과류</a></li>
+                        <li><a data-toggle="tab" href="#menu15" class="myRecipe_ingredient">곡류</a></li>
+                        <li><a data-toggle="tab" href="#menu16" class="myRecipe_ingredient">기타</a></li>
+                        
                   </ul>
                </div>
                <div class="myRecipe_MainCategory">
                   <ul class="nav nav-pills">
                   <li id="myRecipe_li_categoryName5"><span id="myRecipe_span_categoryName2" class="myRecipe_span_value" id="">종류별</span></li>
                      <li class="active"><!-- <a data-toggle="tab" href="#home" class="myRecipe_kindOf">전체</a> --></li>
-                     <li><a data-toggle="tab" href="#menu1" class="myRecipe_kindOf">밥/죽</a></li>
-                     <li><a data-toggle="tab" href="#menu2" class="myRecipe_kindOf">면/만두</a></li>
-                     <li><a data-toggle="tab" href="#menu3" class="myRecipe_kindOf">국/탕/찌개</a></li>
-                     <li><a data-toggle="tab" href="#menu4" class="myRecipe_kindOf">김치/밑반찬</a></li>
-                     <li><a data-toggle="tab" href="#menu5" class="myRecipe_kindOf">샐러드/스프</a></li>
-                     <li><a data-toggle="tab" href="#menu6" class="myRecipe_kindOf">양념/소스/잼</a></li>
-                     <li><a data-toggle="tab" href="#menu7" class="myRecipe_kindOf">차/음료</a></li>
-                     <li><a data-toggle="tab" href="#menu8" class="myRecipe_kindOf">베이킹/떡</a></li>
-                     <li><a data-toggle="tab" href="#menu9" class="myRecipe_kindOf">도시락/간식/디저트</a></li>
-                     <li><a data-toggle="tab" href="#menu10" class="myRecipe_kindOf">튀김</a></li>
-                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_kindOf">기타</a></li>
+                     <li><a data-toggle="tab" href="#menu1" class="myRecipe_kindOf">밑반찬</a></li>
+                     <li><a data-toggle="tab" href="#menu2" class="myRecipe_kindOf">메인반찬</a></li>
+                     <li><a data-toggle="tab" href="#menu3" class="myRecipe_kindOf">국/탕</a></li>
+                     <li><a data-toggle="tab" href="#menu4" class="myRecipe_kindOf">찌개</a></li>
+                     <li><a data-toggle="tab" href="#menu5" class="myRecipe_kindOf">디저트</a></li>
+                     <li><a data-toggle="tab" href="#menu6" class="myRecipe_kindOf">면/만두</a></li>
+                     <li><a data-toggle="tab" href="#menu7" class="myRecipe_kindOf">밥/죽/떡</a></li>
+                     <li><a data-toggle="tab" href="#menu8" class="myRecipe_kindOf">전</a></li>
+                     <li><a data-toggle="tab" href="#menu9" class="myRecipe_kindOf">김치젓갈/장류</a></li>
+                     <li><a data-toggle="tab" href="#menu10" class="myRecipe_kindOf">양념/소스/잼</a></li>
+                     <li><a data-toggle="tab" href="#menu11" class="myRecipe_kindOf">양식</a></li>
+                     <li><a data-toggle="tab" href="#menu12" class="myRecipe_kindOf">샐러드</a></li>
+                     <li><a data-toggle="tab" href="#menu13" class="myRecipe_kindOf">스프</a></li>
+                     <li><a data-toggle="tab" href="#menu14" class="myRecipe_kindOf">빵</a></li>
+                     <li><a data-toggle="tab" href="#menu15" class="myRecipe_kindOf">과자</a></li>
+                     <li><a data-toggle="tab" href="#menu16" class="myRecipe_kindOf">차/음료/술</a></li>
+                     <li><a data-toggle="tab" href="#menu17" class="myRecipe_kindOf">기타</a></li>
                   </ul>
                </div>
             </div>

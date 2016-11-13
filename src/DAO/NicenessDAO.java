@@ -38,7 +38,7 @@ public class NicenessDAO {
 			String sql="INSERT INTO niceness_tb VALUES(?,?,?,sysdate)";
 			Connection conn = dbConnection.getConn();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1,nicenessCode);//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,nicenessCode);//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,userCode);
 			pstmt.setString(3,postCode); 
 
@@ -125,7 +125,7 @@ public class NicenessDAO {
 				String nicenessDate=rs.getString("niceness_DATE");
 				nicenessVO=new NicenessVO(nicenessCode, userCode, postCode, nicenessDate);		
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
@@ -164,10 +164,10 @@ public class NicenessDAO {
 				String temp=rs.getString("post_code");
 				/*String nicenessDate=rs.getString("niceness_DATE");*/
 				stringList.add(temp);//=new NicenessVO(nicenessCode, userCode, postCode, nicenessDate);
-				if(stringList.size()==6)//¸ÞÀÎÈ­¸é¿¡´Â ¿À´ÃÀÇ ÃßÃµÀÌ 6°³´Ï±î 6°³µÇ¸é ¸®ÅÏ
+				if(stringList.size()==6)//ï¿½ï¿½ï¿½ï¿½È­ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ãµï¿½ï¿½ 6ï¿½ï¿½ï¿½Ï±ï¿½ 6ï¿½ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 					return stringList;
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {

@@ -48,10 +48,10 @@
 							src="img/main_img/logo9.png" id="flookLogo" width="75"
 							height="70">
 					</a></li>
-					<li class="navi-item boxoffice "><a href="FlookRecipe.jsp"
+					<!--li class="navi-item boxoffice "><a href="FlookRecipe.jsp"
 						id="flookChief" onclick="flookRecipe();"
 						style="text-decoration: none">Flook 요리사</a> <span
-						class="highlight"></span></li>
+						class="highlight"></span></li-->
 					<li class="navi-item genre "><a href="myRecipe.jsp"
 						id="imChief" style="text-decoration: none">나도 요리사</a> <span
 						class="highlight"></span></li>
@@ -119,10 +119,10 @@
 									type="image" src="img/flook_img/cart.png" style="width:50px;height:50px;"></a>
 								<div class="menu my" id="test"></div> <span class="highlight"></span>
 							</li> -->
-							<li class="navi-item genre "><a href="#"
+							<!--  li class="navi-item genre "><a href="#"
 								onclick="location.href='newsFeed'" id="eventIcon3"><input
 									type="image" src="img/flook_img/newspid.png" style="width:50px;height:50px;"></a> <span
-								class="highlight"></span></li>
+								class="highlight"></span></li-->
 						</ul>
 					</div>
 					<div class="menu my" style="display: inline; float: right">

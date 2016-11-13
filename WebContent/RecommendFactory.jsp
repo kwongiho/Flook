@@ -61,7 +61,7 @@ function unchange(k)
          <%} %><!-- 발표용 스크립틀릿  --></p>
          <br/>
          <a type="button" id="scrapBtn" class="info"
-            href="javascript:insertScrap('${recommend.recipeCode }')">스크랩</a>
+            href="javascript:insertScrap('${recipe.recipeCode }')">스크랩</a>
       </div>
    </div> 
 </c:forEach>

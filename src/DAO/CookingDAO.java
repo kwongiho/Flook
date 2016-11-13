@@ -223,7 +223,7 @@ public class CookingDAO {
 				cookingVO=new CookingVO(cookingCode, recipeCode, cookingSequence, cookingImage, cookingCaption);
 				cookingList.add(cookingVO);
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
@@ -244,7 +244,7 @@ public class CookingDAO {
 	
 	public static void main(String args[]){
 		CookingDAO dao= CookingDAO.getInstance();
-		//System.out.println(dao.insertCooking("Cooking_001", "RECIPE_001",1, "ÀÌ¹ÌÁö2", "¼³¸íÁßÀÔ´Ï´Ù"));
+		//System.out.println(dao.insertCooking("Cooking_001", "RECIPE_001",1, "ï¿½Ì¹ï¿½ï¿½ï¿½2", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½"));
 //		System.out.println(dao.deleteCooking("Cooking_001"));
 		//System.out.println(dao.updateCooking("RECIPE_002", "RECIPE_002",3, "image333", "newCaption", "cooking_001"));
 	}

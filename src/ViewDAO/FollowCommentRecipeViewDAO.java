@@ -17,7 +17,12 @@ public class FollowCommentRecipeViewDAO {
 	private FollowCommentRecipeViewDAO()
 	{
 		this.dbConn = DBConnection.getInstance();
-		conn = dbConn.getConn();
+		try {
+			conn = dbConn.getConn();	
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
 	}
 	
 	private static FollowCommentRecipeViewDAO getInstance()

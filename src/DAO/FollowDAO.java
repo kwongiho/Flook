@@ -37,7 +37,7 @@ public class FollowDAO {
 			String sql="INSERT INTO follow_tb VALUES(?,?,?)";
 			Connection conn = dbConnection.getConn();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1,followCode);//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,followCode);//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,targetUserCode);
 			pstmt.setString(3,myUserCode); 
 
@@ -151,7 +151,7 @@ public class FollowDAO {
 				String followCode=rs.getString("FOLLOW_CODE"); 
 				followVO=new FollowVO(followCode, targetUserCode, myUserCode);		
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
@@ -183,7 +183,7 @@ public class FollowDAO {
 				FollowVO followVO = new FollowVO(followCode, userCode, followUserCode);
 				followList.add(followVO);
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {

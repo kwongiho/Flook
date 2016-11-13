@@ -14,7 +14,7 @@ import Connection.DBConnection;
 import VO.CartVO;
 
 public class CartDAO {
-	private DBConnection dbConnection;
+	private DBConnection dbConnection = DBConnection.getInstance();
 	private static CartDAO dao=new CartDAO();
 	
 	private CartDAO() {
@@ -37,7 +37,7 @@ public class CartDAO {
 			String sql="INSERT INTO cart_tb VALUES(?,?,?)";
 			Connection conn = dbConnection.getConn();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1,cartCode);//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,cartCode);//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,userCode);
 			pstmt.setString(3,ingredientCode); 
 
@@ -67,7 +67,7 @@ public class CartDAO {
 					dbConnection.getConn().commit();
 					pstmt.close();
 				}
-				catch(SQLException se)
+				catch(Exception se)
 				{
 					System.out.println(se.getMessage());
 					//se.stackTracePrint();
@@ -101,7 +101,7 @@ public class CartDAO {
 				if (pstmt != null)
 					dbConnection.getConn().commit();
 					pstmt.close();
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}
@@ -124,7 +124,7 @@ public class CartDAO {
 				String cartCode=rs.getString("CART_CODE"); 
 				cartVO=new CartVO(cartCode, userCode, ingredientCode);	
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
@@ -156,7 +156,7 @@ public class CartDAO {
 				CartVO cartVO = new CartVO(cartCode, userCode, ingredientCode);
 				cartList.add(cartVO);
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {

@@ -4,11 +4,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Random;
 
 import Connection.DBConnection;
 import ViewVO.SimpleUserRecipeViewVO;
 
 public class SimpleUserRecipeViewDAO {
+	/**
+	 * ì¡¸ì‘ ìŠ¤í”¼ë“œ ê°œì„ ì„ ìœ„í•´ì„œ ë§Œë“¬..
+	 */
+	static Random random = new Random();
    final static SimpleUserRecipeViewDAO simpleUserRecipeViewDAO;
    private DBConnection conn;
    static {
@@ -136,9 +141,9 @@ public class SimpleUserRecipeViewDAO {
       
    }
    /**
-    * À½..È®ÀåÇÑ´Ù¸é Àç»ç¿ëÀÌ °¡´ÉÇÒ±î?
-    * ¸Ş¼Òµå¸¦ µÎ°³·Î ³ª´©¾î ³ùÁö¸¸ ¼­·Î ÀÇÁ¸°ü°è¿¡ ÀÖ´Â µÎ°³ÀÇ ¸Ş¼Òµå°¡ ÀÖ´Ù¸é
-    * ÀÌ°Ô ¹Ù·Î oopÀûÀÎ°Ô ¸Â³ª ¸ğ¸£°Ú´Ù ¤Ğ¤Ğ
+    * ï¿½ï¿½..È®ï¿½ï¿½ï¿½Ñ´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò±ï¿½?
+    * ï¿½Ş¼Òµå¸¦ ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¿¡ ï¿½Ö´ï¿½ ï¿½Î°ï¿½ï¿½ï¿½ ï¿½Ş¼Òµå°¡ ï¿½Ö´Ù¸ï¿½
+    * ï¿½Ì°ï¿½ ï¿½Ù·ï¿½ oopï¿½ï¿½ï¿½Î°ï¿½ ï¿½Â³ï¿½ ï¿½ğ¸£°Ú´ï¿½ ï¿½Ğ¤ï¿½
     * @param method
     * @param situation
     * @param nation
@@ -163,7 +168,7 @@ public class SimpleUserRecipeViewDAO {
          
          while(res.next()) {
             speedArray.add(new SimpleUserRecipeViewVO(res.getString("post_Code"), res.getString("recipe_Code"), res.getString("user_Code"), res.getString("user_Name"), res.getString("complete_Image"), res.getString("recipe_Name"), res.getString("recipe_Description"), res.getInt("like_Count"), res.getInt("post_Hits"), res.getString("country_Category_Name"), res.getString("ingredient_Category_Name"), res.getString("kind_Category_Name"), res.getString("situation_Category_Name"), res.getString("method_Category_Name")));
-            System.out.println(res.getString("recipe_code")+"/¿©±â");
+            System.out.println(res.getString("recipe_code")+"/ï¿½ï¿½ï¿½ï¿½");
          }
       } catch(Exception ex) {
          ex.printStackTrace();
@@ -178,7 +183,7 @@ public class SimpleUserRecipeViewDAO {
       
    }
    /**
-    * »ó¿ìÇü. »óÈ²º°ÃßÃµ¸Ş´º.
+    * ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½È²ï¿½ï¿½ï¿½ï¿½Ãµï¿½Ş´ï¿½.
     * @param situationName
     * @return
     */
@@ -192,6 +197,8 @@ public class SimpleUserRecipeViewDAO {
             pstmt.setString(1,situationName);
             ResultSet res = pstmt.executeQuery();
             while(res.next()) {
+            	if(random.nextInt()%2==0)
+            		continue;
               // completePath="file:///"+res.getString("complete_image");
                simpleUserRecipeVOList.add(new SimpleUserRecipeViewVO(res
                      .getString("post_Code"), res
@@ -223,8 +230,138 @@ public class SimpleUserRecipeViewDAO {
          return simpleUserRecipeVOList;
          
    }
+   public LinkedList<SimpleUserRecipeViewVO> searchKind(String kindName){
+       LinkedList<SimpleUserRecipeViewVO> simpleUserRecipeVOList = new LinkedList<SimpleUserRecipeViewVO>();
+        PreparedStatement pstmt = null;
+        try {
+           String sql = "select * from simple_user_recipe_view where kind_category_name=?";
+           String completePath=null;
+           pstmt = conn.getConn().prepareStatement(sql);
+           pstmt.setString(1,kindName);
+           ResultSet res = pstmt.executeQuery();
+           while(res.next()) {
+        	   if(random.nextInt()%2==0)
+           		continue;
+             // completePath="file:///"+res.getString("complete_image");
+              simpleUserRecipeVOList.add(new SimpleUserRecipeViewVO(res
+                    .getString("post_Code"), res
+                    .getString("recipe_Code"), res
+                    .getString("user_Code"), res
+                    .getString("user_name"),res
+                    .getString("complete_image"),res
+                    .getString("recipe_name"),res
+                    .getString("recipe_Description"), res
+                    .getInt("like_Count"), res
+                    .getInt("post_Hits"),res
+                    .getString("country_category_name"), res
+                    .getString("ingredient_category_name"), res
+                    .getString("kind_category_name"), res
+                    .getString("situation_category_name"), res
+                    .getString("method_category_name")));
+           }
+        } catch(Exception ex) {
+           ex.printStackTrace();
+        } finally {
+           try {
+              pstmt.close();
+           } catch(Exception ex) {
+              ex.printStackTrace();
+           }
+        }
+       
+     
+        return simpleUserRecipeVOList;     
+  }
+   public LinkedList<SimpleUserRecipeViewVO> searchMethod(String methodName){
+       LinkedList<SimpleUserRecipeViewVO> simpleUserRecipeVOList = new LinkedList<SimpleUserRecipeViewVO>();
+        PreparedStatement pstmt = null;
+        try {
+        	
+           String sql = "select * from simple_user_recipe_view where method_category_name=?";
+           String completePath=null;
+           pstmt = conn.getConn().prepareStatement(sql);
+           pstmt.setString(1,methodName);
+           ResultSet res = pstmt.executeQuery();
+           
+           while(res.next()) {
+        	   if(random.nextInt()%2==0)
+           		continue;
+        	   System.out.println("SimpleUserRecipeViewDAO - method");
+              simpleUserRecipeVOList.add(new SimpleUserRecipeViewVO(res
+                    .getString("post_Code"), res
+                    .getString("recipe_Code"), res
+                    .getString("user_Code"), res
+                    .getString("user_name"),res
+                    .getString("complete_image"),res
+                    .getString("recipe_name"),res
+                    .getString("recipe_Description"), res
+                    .getInt("like_Count"), res
+                    .getInt("post_Hits"),res
+                    .getString("country_category_name"), res
+                    .getString("ingredient_category_name"), res
+                    .getString("kind_category_name"), res
+                    .getString("situation_category_name"), res
+                    .getString("method_category_name")));
+           }
+        } catch(Exception ex) {
+           ex.printStackTrace();
+        } finally {
+           try {
+              pstmt.close();
+           } catch(Exception ex) {
+              ex.printStackTrace();
+           }
+        }
+       
+     
+        return simpleUserRecipeVOList;     
+  }
+   public LinkedList<SimpleUserRecipeViewVO> searchIngredient(String ingredientName){
+       LinkedList<SimpleUserRecipeViewVO> simpleUserRecipeVOList = new LinkedList<SimpleUserRecipeViewVO>();
+        PreparedStatement pstmt = null;
+        try {
+           String sql = "select * from simple_user_recipe_view where ingredient_category_name=?";
+           String completePath=null;
+           pstmt = conn.getConn().prepareStatement(sql);
+           pstmt.setString(1,ingredientName);
+           ResultSet res = pstmt.executeQuery();
+           while(res.next()) {
+        	   if(random.nextInt()%2==0)
+           		continue;
+             // completePath="file:///"+res.getString("complete_image");
+              simpleUserRecipeVOList.add(new SimpleUserRecipeViewVO(res
+                    .getString("post_Code"), res
+                    .getString("recipe_Code"), res
+                    .getString("user_Code"), res
+                    .getString("user_name"),res
+                    .getString("complete_image"),res
+                    .getString("recipe_name"),res
+                    .getString("recipe_Description"), res
+                    .getInt("like_Count"), res
+                    .getInt("post_Hits"),res
+                    .getString("country_category_name"), res
+                    .getString("ingredient_category_name"), res
+                    .getString("kind_category_name"), res
+                    .getString("situation_category_name"), res
+                    .getString("method_category_name")));
+           }
+        } catch(Exception ex) {
+           ex.printStackTrace();
+        } finally {
+           try {
+              pstmt.close();
+           } catch(Exception ex) {
+              ex.printStackTrace();
+           }
+        }
+       
+     
+        return simpleUserRecipeVOList;     
+  }
+   
+   
    /**
-    * »ó¿ìÇü. ¿À´ÃÀÇ ÃßÃµ¸Ş´º¶§ »ç¿ë.
+    * ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ãµï¿½Ş´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½.
     * @param postCode
     * @return
     */
@@ -266,15 +403,15 @@ public class SimpleUserRecipeViewDAO {
                   }
                }
                /*for(int i=0;i<simpleUserRecipeVOList.size();i++){
-                   System.out.println("»óÈ²º°ÃßÃµ1Â÷ÇÊÅÍ¸µÅ×½ºÆ®"+simpleUserRecipeVOList.get(i));
+                   System.out.println("ï¿½ï¿½È²ï¿½ï¿½ï¿½ï¿½Ãµ1ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½×½ï¿½Æ®"+simpleUserRecipeVOList.get(i));
                }*/
             
                return temp;
             
          }
    /**
-    * ¸®ÆÑÅä¸µ½Ã ¾Ë¾Æ¼­ °íÄ¥°Í.
-    * ¹ßÇ¥¿ëÀ¸·Î ¸¸µë.
+    * ï¿½ï¿½ï¿½ï¿½ï¿½ä¸µï¿½ï¿½ ï¿½Ë¾Æ¼ï¿½ ï¿½ï¿½Ä¥ï¿½ï¿½.
+    * ï¿½ï¿½Ç¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
     * @return
     */
    public ArrayList<SimpleUserRecipeViewVO> searchUserRecipeList(){
@@ -318,7 +455,7 @@ public class SimpleUserRecipeViewDAO {
       return simpleUserRecipeViewVO;
    }
    public static void main(String[]args) {
-      System.out.println(SimpleUserRecipeViewDAO.getInstance().searchUserRecipeListByHashTag("½ºÆÔ"));
+      System.out.println(SimpleUserRecipeViewDAO.getInstance().searchUserRecipeListByHashTag("ï¿½ï¿½ï¿½ï¿½"));
    }
    
 }

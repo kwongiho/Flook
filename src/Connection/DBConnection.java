@@ -1,8 +1,12 @@
 
 package Connection;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 //
 //
@@ -10,105 +14,50 @@ import java.sql.SQLException;
 //
 //  @ Project : Untitled
 //  @ File Name : DBConnection.java
-//  @ Date : 2015-06-24
+//  @ Date : 2016-11-1
 //  @ Author : 
 //
 //
-public class DBConnection
-{
-	private Connection conn;
-	private String url;
-	private String dbId;
-	private String dbPwd;
-	private static DBConnection dbConnection;
-	
-	static{
-		dbConnection=new DBConnection();
+public class DBConnection {
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	static final String DB_URL = "jdbc:mysql://localhost:3306/flook";
+	//static final String DB_URL = "jdbc:mysql://kwongiho.iptime.org:3306/flook";
+//27.117.242.131
+	static final String USERNAME = "root";
+	static final String PASSWORD = "siddid";
+	//static final String PASSWORD = AutoStatic.MYSQL_PWD;
+	private static DBConnection instance;
+	static {
+		instance = new DBConnection();
 	}
-	private DBConnection()
-	{
-		this("jdbc:oracle:thin:@127.0.0.1:1521:XE","R2D2","1234");
-	}
-	private DBConnection(String url,String dbId,String dbPwd)
-	{
-		this.url = url;
-		this.dbId = dbId;
-		this.dbPwd = dbPwd;
-		connect();
-	}
-
 	public static DBConnection getInstance(){
-		return dbConnection;
+		return instance;
 	}
-	private void connect()
-	{
-		try{
-
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection(url,dbId,dbPwd);
+	Connection conn = null;
+	public Connection getConn(){
+		try {
 			conn.setAutoCommit(false);
-			System.out.println("접속완료!!!!!!!!!");
+		} catch(Exception ex) {
+			ex.printStackTrace();
 		}
-		catch(ClassNotFoundException cnfe)
-		{
-			System.out.println("해당 클래스가 없음 \n" + cnfe.getMessage());
-		}
-		catch(SQLException se)
-		{
-			System.out.println(se.getMessage());
-		}
+		
+		return this.conn;
 	}
-
-	public void disConnect()
-	{
+	private DBConnection(){
 		try{
-			if(conn != null)
-			{
-				conn.close();
-				System.out.println("DB 종료 완료!");
-			}
+			Class.forName(JDBC_DRIVER);
+			conn = DriverManager.getConnection(DB_URL,USERNAME,PASSWORD);
 		}
-		catch(SQLException se)
-		{
-			System.out.println(se.getMessage());
+		catch(Exception ex) {
+			ex.printStackTrace();
 		}
-	}
-	public void setConn(Connection conn)
-	{
-		this.conn = conn;
-	}
-	public void setUrl(String url)
-	{
-		this.url = url;
-	}
-	public void setDbId(String dbId)
-	{
-		this.dbId = dbId;
-	}
-	public void setDbPwd(String dbPwd)
-	{
-		this.dbPwd = dbPwd;
-	}
-	public Connection getConn()
-	{
-		return conn;
-	}
-	public String getUrl()
-	{
-		return url;
-	}
-	public String getDbId()
-	{
-		return dbId;
-	}
-	public String getDbPwd()
-	{
-		return dbPwd;
-	}
-	public String toString()
-	{
-		String conStr = conn.toString();
-		String str = conStr + " / " + url+ " / "+dbId+" / "+dbPwd;
-		return str;
 	}
 }
+/*
+ * try {
+ * 
+ * Class.forName("com.mysql.jdbc.Driver"); conn =
+ * DriverManager.getConnection("jdbc:mysql://localhost:3306/RECALLDB","recall",
+ * "recallpwd"); conn.setAutoCommit(false); } catch (Exception ex) {
+ * ex.printStackTrace(); }
+ */

@@ -1,6 +1,7 @@
 *
 {
-	margin:0 auto;	
+	margin:0 auto;
+		
 }
 .view {
    width: 300px;
@@ -172,10 +173,12 @@
 }
 .myRecipe_body
 {
-    height: 720px;
+    height: 100%;
     width: 100%;
     background-image: url(../../img/main_img/banner/profileBanner2.jpg);
     background-size: cover;
+	background-attachment: fixed;
+	overflow-y:scroll;
 }
 #myRecipe_banner {
     height: 240px;
@@ -214,7 +217,7 @@
 }
 #myRecipe_list
 {
-	height:700px;
+	height:800px;
 	margin:50px 0px 0px 40px;
 }
 #myRecipe_input_recipeWrite{

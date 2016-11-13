@@ -3,7 +3,6 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -60,14 +59,14 @@ public class PostDAO {
 			}
 			
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			se.printStackTrace(); 
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace(); 
 			}
 		}   
@@ -101,14 +100,14 @@ public class PostDAO {
 			}
 			
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			se.printStackTrace(); 
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace(); 
 			}
 		}   
@@ -151,15 +150,13 @@ public class PostDAO {
 			row = pstmt.executeUpdate();
 			if (row != 0)
 				dbConnection.getConn().commit();
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			System.out.println(se.getMessage());
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
-		} finally {
+		}  finally {
 			try {
 				if (pstmt != null)
 					pstmt.close();
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}
@@ -202,14 +199,14 @@ public class PostDAO {
 			}
 			
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			se.printStackTrace(); 
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace(); 
 			}
 		}   
@@ -250,14 +247,14 @@ public class PostDAO {
 			}
 			
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			se.printStackTrace(); 
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace(); 
 			}
 		}   
@@ -361,14 +358,14 @@ public class PostDAO {
 			while (rs.next()) { 
 				recipeCount=rs.getInt("write_count"); 
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace();
 			}
 		} 

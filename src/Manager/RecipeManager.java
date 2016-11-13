@@ -73,7 +73,7 @@ public class RecipeManager {
 		System.out.println("check2");
 		return 1;
 	}
-	public byte deleteRecipe(String recipeCode)  // ·¹½ÃÇÇ »èÁ¦ º¹ºÙ
+	public byte deleteRecipe(String recipeCode)  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	{
 		byte res1=recipeCategoryDAO.deleteCategory(recipeCode);
 		byte res3=cookingDAO.deleteCookingRecipe(recipeCode);
@@ -117,13 +117,13 @@ public class RecipeManager {
 	}
 	public LinkedList<IngredientViewVO> searchSubUserRecipeIngredientList(String recipeCode)
 	{
-		return ingredientViewDAO.searchIngredientList(recipeCode,"S");
+		return ingredientViewDAO.searchIngredientList(recipeCode,"M");
 	}
 	public RecipeCategoryViewVO searchRecipeCategory(String recipeCode)
 	{
 		return recipeCategoryViewDAO.searchCategoryList(recipeCode);
 	}
-	public String searchPostCodeByRecipeCode(String recipeCode) {/*±Ç±âÈ£Ãß°¡*/
+	public String searchPostCodeByRecipeCode(String recipeCode) {/*ï¿½Ç±ï¿½È£ï¿½ß°ï¿½*/
 		return postDAO.searchPostCodeByRecipeCode(recipeCode);
 	}
 	public int modifyRecipe(String recipeCode,RecipeVO recipeVO,PostVO postVO,LinkedList<CookingVO> cookingList,LinkedList<IngredientVO> ingredientList,String[] recipeCategory)

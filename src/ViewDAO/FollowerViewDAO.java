@@ -18,6 +18,7 @@ public class FollowerViewDAO {
 	private FollowerViewDAO()
 	{
 		this.dbConn = DBConnection.getInstance();
+		
 		conn = dbConn.getConn();
 	}
 	
@@ -26,7 +27,7 @@ public class FollowerViewDAO {
 		return followerViewDAO;
 	}
 
-	//³»°¡ ÆÈ·ÎÀ×ÇÏ´Â »ç¶÷ÀÇ ¸ñ·Ï(ÆÈ·ÎÀ×)
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½È·ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½(ï¿½È·ï¿½ï¿½ï¿½)
 	public ArrayList<FollowerViewVO> requestFollowerList(String userCode)
 	{
 		ArrayList<FollowerViewVO> followingArray = null;
@@ -73,7 +74,7 @@ public class FollowerViewDAO {
 		}
 		return followingArray;
 	}
-	//³ª¸¦ ÆÈ·Î¿ìÇÏ´Â »ç¶÷µéÀÇ ¸ñ·Ï + ÆÈ·Î¿ì ¿©ºÎ
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½È·Î¿ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ + ï¿½È·Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 		public ArrayList<FollowerViewWithFollowingOrNotVO> requestFollowerListWithFollowingOrNot(String userCode)
 		{
 			ArrayList<FollowerViewWithFollowingOrNotVO> followingArray = null;

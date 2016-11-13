@@ -46,10 +46,8 @@
 					ImgReader.readAsDataURL(img[0]);
 				}
 			}
-		})();
+		})());
 		});
-		
-	});
 </script>
 </head>
 <body>
@@ -61,7 +59,7 @@
 				<table id="profile_header_tb">
 					<tr>
 						<td>
-							<input type="image" src="img/profile_img/likeness.png" width="50px">
+							<input type="image" src="img/profile_img/likeness.png" width="80px" class="padding_value_image">
 						</td>
 						<td>
 							<c:if test="${sessionScope.userImage != null }">
@@ -72,27 +70,27 @@
 							</c:if>
 						</td>
 						<td>
-							<input type="image" src="img/profile_img/myWriteRecipe2.png" width="50px">
+							<input type="image" src="img/profile_img/myWriteRecipe2.png" width="80px" class="padding_value_image">
 						</td>
 					</tr>
 					<tr>
-						<td>받은 좋아요</td>
+						<td>　받은 좋아요</td>
 						<td></td>
 						<td>등록한 레시피</td>
 					</tr>
 					<tr>
-						<td>${sessionScope.likeCount }</td>
+						<td class="padding_value">${sessionScope.likeCount }</td>
 						<td><strong><h3>${sessionScope.userName }</h3></strong></td>
-						<td>${sessionScope.postCount }</td>
+						<td class="padding_value">${sessionScope.postCount }</td>
 					</tr>
 				</table>
 			</div>
 			<div class="container">
 				<nav class="navbar navbar-default">
-				<div class="container-fluid">
+				<div class="container-fluid" id="container-fluid">
 					<div>
 						<ul class="nav navbar-nav" id="profile_navbar-nav">
-							<li class="profile_nav"><a href="#" onclick="myGraph()">취향분석표</a></li>
+							<!--  li class="profile_nav"><a href="#" onclick="myGraph()">취향분석표</a></li-->
 							<li class="profile_nav"><a href="#" onclick="myRecipe()">내가 작성한 레시피</a></li>
 							<li class="profile_nav"><a href="#" onclick="myScrap()">MY스크랩</a></li>
 							<li class="profile_nav"><a href="cartList.jsp">장보기 목록</a></li>
@@ -193,3 +191,17 @@
 	</div>
 </body>
 </html>
+<style>
+.padding_value {
+	padding-left:35px;
+}
+.padding_value_image {
+	padding-left:15px
+}
+.container-fluid {
+	width:78%;
+}
+#myWriteRecipe_elements {
+	overflow-y:scroll;
+}
+</style>

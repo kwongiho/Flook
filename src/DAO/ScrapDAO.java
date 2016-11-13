@@ -3,9 +3,9 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Random;
@@ -31,16 +31,18 @@ public class ScrapDAO {
 		String scrapCode=codeGenerator2();
 		
 		int row=0;
-		
+		GregorianCalendar gc = new GregorianCalendar();
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd HH:mm");
+		String postDate = sd.format(gc.getTime());
 		try
 		{
-			String sql="INSERT INTO scrap_tb VALUES(?,?,?,sysdate)";
+			String sql="INSERT INTO scrap_tb VALUES(?,?,?,?)";
 			Connection conn = dbConnection.getConn();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1,scrapCode);//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,scrapCode);//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,userCode);
 			pstmt.setString(3,postCode); 
-
+			pstmt.setString(4, postDate);
 			row=pstmt.executeUpdate();
 			System.out.println("isCheck");
 			
@@ -48,15 +50,10 @@ public class ScrapDAO {
 				conn.commit();  
 		}
 		
-		catch(SQLException se)
+		catch(Exception se)
 		{
 				se.printStackTrace();
 			//se.stackTracePrint();
-		}
-		catch(Exception e)
-		{
-				System.out.println(e.getMessage());
-			//e.stackTracePrint();
 		}
 		finally
 		{
@@ -66,7 +63,7 @@ public class ScrapDAO {
 				{
 					pstmt.close();
 				}
-				catch(SQLException se)
+				catch(Exception se)
 				{
 					System.out.println(se.getMessage());
 					//se.stackTracePrint();
@@ -91,15 +88,13 @@ public class ScrapDAO {
 			if (rowNum != 0)
 				dbConnection.getConn().commit();
 			
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			System.out.println(se.getMessage());
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
 		} finally {
 			try {
 				if (pstmt != null)
 					pstmt.close();
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}
@@ -123,14 +118,14 @@ public class ScrapDAO {
 				String scrapDate=rs.getString("SCRAP_DATE");
 				scrapVO=new ScrapVO(scrapCode, userCode, postCode, scrapDate);		
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace();
 			}
 		} 
@@ -156,14 +151,14 @@ public class ScrapDAO {
 				ScrapVO scrapVO=new ScrapVO(scrapCode, userCode, postCode, scrapDate);
 				scrapList.add(scrapVO);
 			}
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			se.printStackTrace();
 		} finally {
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				se.printStackTrace();
 			}
 		} 

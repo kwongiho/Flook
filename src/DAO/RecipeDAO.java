@@ -2,7 +2,6 @@ package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -83,14 +82,14 @@ public class RecipeDAO {
 			}
 
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			System.out.println(se.getMessage());
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}   
@@ -125,14 +124,14 @@ public class RecipeDAO {
 			}
 
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			System.out.println(se.getMessage());
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}   
@@ -157,14 +156,14 @@ public class RecipeDAO {
 				conn.commit();
 			}
 
-		} catch (SQLException se) {
+		} catch (Exception se) {
 			System.out.println(se.getMessage());
 		} finally {
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}   
@@ -194,7 +193,7 @@ public class RecipeDAO {
 		int row = 0; 
 		try
 		{
-			// ¿Ï¼º»çÁø º¯°æ ºÒ°¡
+			// ï¿½Ï¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½
 			String sql = "UPDATE recipe_tb SET complete_image=?,recipe_name=?,recipe_description=?,person_number=?,cooking_time=?,cooking_level=? WHERE recipe_code=?";
 			
 			
@@ -214,14 +213,14 @@ public class RecipeDAO {
 				conn.commit(); 
 			}
 		}
-		catch(SQLException se){
+		catch(Exception se){
 			System.out.println(se.getMessage());
 		}finally{
 			try {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-			} catch (SQLException se) {
+			} catch (Exception se) {
 				System.out.println(se.getMessage());
 			}
 		}    

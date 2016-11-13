@@ -7,35 +7,68 @@
   <title>Bootstrap Case</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-<div class="container" style="height:10000px">
-  <h3>Pills</h3>
-  <ul class="nav nav-pills">
-    <li class="active"><a href="#menu1">Home</a></li>
-    <li><a href="#menu2">Menu 1</a></li>
-    <li><a href="#menu3">Menu 2</a></li>
-    <li><a href="#menu4">Menu 3</a></li>
-  </ul>
+<style>
+.fork_group {
+	width:1000px;
+	height:25px;
+	display:flex;
+}
+.rating_fork {
+	/*width:126px;*/
+	width:25px;
+	height:25px;
+	background-image: url('img/search_img/images/ratingfork.png');
+}
+.fork1:hover{
+	
+	background-position:-26x 0px;
+}
+.fork2:hover{
+	background-position:0px 0px;
+}
+.fork3:hover{
+	background-position:0px 0px;
+}
+.fork4:hover{
+	width:126px;
+	background-position:0px 0px;
+}
+.fork5:hover{
+	width:126px;
+	background-position:0px 0px;
+}
+</style>
+<script>
+window.onload=function(){
+	$(".fork2").hover(function(){
+		$(".fork1").css("display","none");
+		$(".fork3").css("display","none");
+		$(".fork4").css("display","none");
+		$(".fork5").css("display","none");
+		
+	},function(){
+		$(".fork1").css("display","");
+		$(".fork3").css("display","");
+		$(".fork4").css("display","");
+		$(".fork5").css("display","");
+	});
+}
 
-  <div class="row">
-    <div id="menu1" class="tab-pane fade">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade"> 
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade"> 
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="" class="tab-pane fade"> 
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
+</script>
+<div class="fork_group">
+	<div class="rating_fork fork1">
+	</div>
+	<div class="rating_fork fork2">
+	</div>
+	<div class="rating_fork fork3">
+	</div>
+	<div class="rating_fork fork4">
+	</div>
+	<div class="rating_fork fork5">
+	</div>
 </div>
-
 </body>
 </html>

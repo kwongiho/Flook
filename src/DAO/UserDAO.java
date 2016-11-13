@@ -133,7 +133,7 @@ public class UserDAO {
 	public int insertUser(String userName,String userImage, String userEmail,String userPassword,String userGender,String userBirthday )
 	{
 		/*INSERT INTO user_tb(user_code,user_name,user_image,user_email,user_password,user_gender,user_birthday)
-		VALUES('USER_150729_001','Àü»ó¿ì','http://www.naver.com','swj1539@naver.com','1539','³²¼º',to_date('1990/08/04','yyyy/mm/dd'))
+		VALUES('USER_150729_001','ï¿½ï¿½ï¿½ï¿½ï¿½','http://www.naver.com','swj1539@naver.com','1539','ï¿½ï¿½ï¿½ï¿½',to_date('1990/08/04','yyyy/mm/dd'))
 	*/
 		PreparedStatement pstmt=null;
 		int row=0;
@@ -143,7 +143,7 @@ public class UserDAO {
 			String sql="INSERT INTO user_tb(user_code,user_name,user_image,user_email,user_password,user_gender,user_birthday,user_Sns)"+
 					"VALUES(?,?,?,?,?,?,to_date(?,'yyyy/mm/dd'),?)";
 			pstmt=conn.getConn().prepareStatement(sql);
-			pstmt.setString(1,codeGenerator());//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,codeGenerator());//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,userName);
 			pstmt.setString(3,userImage);
 			pstmt.setString(4, userEmail);
@@ -202,7 +202,7 @@ public class UserDAO {
 					"SET user_password=?"+
 					"WHERE user_email=? AND user_password=?";
 			pstmt=conn.getConn().prepareStatement(sql);
-			pstmt.setString(1,newPassword);//ÄÚµå»ý¼ºÇÊ¿ä
+			pstmt.setString(1,newPassword);//ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½
 			pstmt.setString(2,email);
 			pstmt.setString(3,password);
 
@@ -297,10 +297,10 @@ public class UserDAO {
 			{
 				if(pstmt != null) {
 					pstmt.close();
-					conn.disConnect();
+					
 				}
 			}
-			catch (SQLException se)
+			catch (Exception se)
 			{
 				System.out.println(se.getMessage());
 			}
@@ -448,18 +448,18 @@ public class UserDAO {
 				
 				System.out.println("UserDAO : "+userName1+", "+followUserCode1);
 				
-				if(followUserCode1 != null)//ÆÈ·Î¿ö°¡ ÀÖ´Â »ç¶÷
+				if(followUserCode1 != null)//ï¿½È·Î¿ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
 				{
 					if(followUserCode1.equals(userCode))
 					{
 						vo = new UserWithFollowOrNotVO(uUserCode1, userName1, userImage1, userEmail1,
 								userPassword1, userGender1, userBirthday1, userSNS1, followCode1,
 								fUserCode1, followUserCode1);
-						System.out.println("ÆÈ·Î¿öO User DAO : "+vo);
+						System.out.println("ï¿½È·Î¿ï¿½O User DAO : "+vo);
 					}
 					else
 					{
-						System.out.println("¼³¸¶ ¿©±â?!");
+						System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½?!");
 						/*vo2 = new UserWithFollowOrNotVO(uUserCode1, userName1, userImage1, userEmail1,
 							userPassword1, userGender1, userBirthday1, userSNS1, followCode1,
 							fUserCode1, followUserCode1);*/
@@ -468,13 +468,13 @@ public class UserDAO {
 								null, null);
 					}
 				}
-				else//ÆÈ·Î¿ö°¡ ¾ø´Â »ç¶÷
+				else//ï¿½È·Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 				{
 					System.out.println("UserDAO userImage : " +userImage1);
 					vo = new UserWithFollowOrNotVO(uUserCode1, userName1, userImage1, userEmail1,
 							userPassword1, userGender1, userBirthday1, userSNS1, followCode1,
 							fUserCode1, followUserCode1);
-					System.out.println("ÆÈ·Î¿öX User DAO : "+vo);
+					System.out.println("ï¿½È·Î¿ï¿½X User DAO : "+vo);
 				}
 			}
 		}
@@ -495,10 +495,10 @@ public class UserDAO {
 	}
 	
 	public static void main(String args[]){
-		//System.out.println(new UserDAO().insertUser("±èÁ¤À±", "www.naverImage.com", "kimkim@naver.com","1539", "³²¼º", "1990/08/04"));
+		//System.out.println(new UserDAO().insertUser("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "www.naverImage.com", "kimkim@naver.com","1539", "ï¿½ï¿½ï¿½ï¿½", "1990/08/04"));
 		//System.out.println(new UserDAO().deleteUser("swj1539@naver.com", "1539"));
 		/*System.out.println(UserDAO.getInstance().login("1234@1234", "1234"));*/
-		System.out.println(UserDAO.getInstance().searchUserListByUserName("±âÈ£"));
+		System.out.println(UserDAO.getInstance().searchUserListByUserName("ï¿½ï¿½È£"));
 	}
 }
 	
