@@ -31,6 +31,7 @@
 				<div class="modal-body" id="testUserIdTag">
 					<div id="recipe_see">
 						<div id="recipe_see_section1">
+						<span>원본링크- <a href="${recipeUrl }" >${recipeUrl }</a></span>
 							<div id="recipe_description_image">
 								<c:if test="${sessionScope.userImage !=null}">
 									<img class="thumbnail" id="recipe_userImg" src="${sessionScope.userImage}"

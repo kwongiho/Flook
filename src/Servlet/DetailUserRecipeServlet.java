@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import DAO.RecipeUrlDAO;
 import Manager.CommentManager;
 import Manager.RecipeManager;
 import UIBean.CookingUIBean;
@@ -37,13 +38,13 @@ public class DetailUserRecipeServlet extends HttpServlet {
 		RecipeManager manager=new RecipeManager();
 		
 		String recipeCode=request.getParameter("choiceRecipe");
-//		System.out.println(recipeCode);
+
 		UserRecipeViewVO userRecipeViewVO=manager.searchUserRecipeInfo(recipeCode);
 		if(userRecipeViewVO!=null)
 		{
 			manager.addPostHits(recipeCode);
 		}
-//		System.out.println(recipeCode);
+
 		
 		LinkedList<IngredientViewVO> mainIngreList=manager.searchMainUserRecipeIngredientList(recipeCode);
 		LinkedList<IngredientViewVO> subIngreList=manager.searchSubUserRecipeIngredientList(recipeCode);
@@ -55,18 +56,16 @@ public class DetailUserRecipeServlet extends HttpServlet {
 		{
 			CookingUIBean bean=new CookingUIBean(cook.getCookingCode(), cook.getCookingImage(), cook.getCookingCaption());
 			cookingList.add(bean);
-//			System.out.println(bean);
+
 		}
-//		System.out.println(mainIngreList+"/////////////////////////ÀÌ°Ô ³ÎÀÌ¸é ¾ÈµÇ´Âµ­");
+
 		for(IngredientViewVO mainIngredient:mainIngreList)
 		{
 			IngredientUIVOBean bean=new IngredientUIVOBean(mainIngredient.getIngredientName(), mainIngredient.getIngredientAmount(), mainIngredient.getIngredientUnitName(),mainIngredient.getIngredientCode());
 			mainIngredientList.add(bean);
-//			System.out.println(bean);
+
 		}
-//		System.out.println();
-//		System.out.println();
-//		System.out.println();
+
 		
 		for(IngredientViewVO subIngredient:subIngreList)
 		{
@@ -95,18 +94,23 @@ public class DetailUserRecipeServlet extends HttpServlet {
 		
 		UserRecipeUIBean uiBean=new UserRecipeUIBean(recipeName, completeImage, recipeDescription, countryCategory, ingredientCategory, kindCategory, situationCategory, methodCategory, personNumber, cookingTime, cookingLevel, hashTag, cookingList.toArray(new CookingUIBean[ cookingList.size()] ), mainIngredientList.toArray(new IngredientUIBean[mainIngredientList.size()]), subIngredientList.toArray(new IngredientUIBean[subIngredientList.size()]), userName, userImage);
 //		System.out.println(uiBean.getCompleteImage());
-//		System.out.println("¿©±âµµ Á¦¹ß¿À°Å¶ó!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//		System.out.println("ï¿½ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ß¿ï¿½ï¿½Å¶ï¿½!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		request.setAttribute("userUIBean", uiBean);
 		
 		request.setAttribute("postCode",manager.searchPostCodeByRecipeCode(recipeCode));
 		
 		CommentManager commentManager = new CommentManager();
 		request.setAttribute("commentList", commentManager.searchComment(recipeCode));
+		
+		String url = RecipeUrlDAO.getInstance().searchRecipeUrl(recipeCode);
+		request.setAttribute("recipeUrl", url);
+	System.out.println("url - >"+url);
 		System.out.println("commentList : "+commentManager.searchComment(recipeCode));
 		System.out.println("post-->"+request.getAttribute("postCode"));
 		//response.getOutputStream().print("<jsp:include page='detailUserRecipe.jsp'/>");
 		//response.getOutputStream().print(new String(recipeName.getBytes("utf-8"),"ISO-8859-1"));
 		RequestDispatcher rd=request.getRequestDispatcher("detailUserRecipe.jsp");
+		
 		rd.forward(request, response);
 	}
 }

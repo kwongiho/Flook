@@ -159,12 +159,156 @@ $(document).ready(function(){
          <div id="main_body_body">
             <div class="header_psh">
                <div class="main_psh">
-               
-                  <div id="insertTodayRecipe"></div>
-				
-                  
 
-                  <%-- </c:forEach> --%>
+						<div id="insertTodayRecipe">
+							<div class="view view-first"
+								style="width: 300px; height: 240px; margin: 15px">
+								<img
+									src="http://recipe.ezmember.co.kr/cache/recipe/2016/08/30/recipe201608309fa1d9c0d54560934e95ac622eabc3d4_m.jpg" />
+								<div class="mask">
+									<form method="post" action="detail" id="detail"
+										style="display: inline">
+										<a type="button" style="text-decoration: none"
+											href="javascript:detailSee('RC1479148419715')">
+											<h2>오징어 라면볶</h2>
+										</a>
+									</form>
+									<p>좋아요 : ${mySimpleRecipe.likeCount}134 조회수
+										:${mySimpleRecipe.postHits}221</p>
+									<div id="score-callback" data-score="0" class="score-height"></div>
+									<!-- 추가되는포크. -->
+									<form>
+										<a type="button" id="insertRcipeBtn" class="info"
+											style="text-decoration: none"
+											href="javascript:insertScrap('RC1479148419715')">스크랩 추가</a>
+									</form>
+								</div>
+							</div>
+						
+						
+						<!--  -->
+						<div class="view view-first"
+                     style="width: 300px; height: 240px; margin: 15px">
+                     <img
+                        src="http://recipe.ezmember.co.kr/cache/recipe/2016/08/30/recipe2016083098019f4d21acef6b65d59776f46ecee9_m.jpg" />
+                     <div class="mask">
+                        <form method="post" action="detail" id="detail"
+                           style="display: inline">
+                           <a type="button" style="text-decoration: none"
+                              href="javascript:detailSee('RC1479148885805')">
+                              <h2>연겨자소스 버섯 수미칩 샐러드</h2>
+                           </a>
+                        </form>
+                        <p>좋아요 : ${mySimpleRecipe.likeCount}137 조회수
+                           :${mySimpleRecipe.postHits}231</p>
+                           <div id="score-callback" data-score="0" class="score-height"></div><!-- 추가되는포크. -->
+                        <form>
+                           <a type="button" id="insertRcipeBtn" class="info" style="text-decoration: none"
+                              href="javascript:insertScrap('RC1479148885805')">스크랩  추가</a>
+                        </form>
+                     </div>
+                  </div>
+                  
+                  <div class="view view-first"
+                     style="width: 300px; height: 240px; margin: 15px">
+                     <img
+                        src="http://recipe.ezmember.co.kr/cache/recipe/2016/08/30/recipe20160830faf11f97cadbe984cd16a12ad6c2bcdf_m.jpg" />
+                     <div class="mask">
+                        <form method="post" action="detail" id="detail"
+                           style="display: inline">
+                           <a type="button" style="text-decoration: none"
+                              href="javascript:detailSee('RC1479170617556')">
+                              <h2>해산물 볶음 라면</h2>
+                           </a>
+                        </form>
+                        <p>좋아요 : ${mySimpleRecipe.likeCount}17 조회수
+                           :${mySimpleRecipe.postHits}131</p>
+                           <div id="score-callback" data-score="0" class="score-height"></div><!-- 추가되는포크. -->
+                        <form>
+                           <a type="button" id="insertRcipeBtn" class="info" style="text-decoration: none"
+                              href="javascript:insertScrap('RC1479170617556')">스크랩  추가</a>
+                        </form>
+                     </div>
+                  </div>
+                  
+                  <div class="view view-first"
+                     style="width: 300px; height: 240px; margin: 15px">
+                     <img
+                        src="http://cloudfront.haemukja.com/vh.php?url=http://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/15720/org_resized_____2.jpg&convert=jpgmin&rt=600" />
+                     <div class="mask">
+                        <form method="post" action="detail" id="detail"
+                           style="display: inline">
+                           <a type="button" style="text-decoration: none"
+                              href="javascript:detailSee('RC1479145454147')">
+                              <h2>공강 30분, 가볍게 고구마샌드위치 </h2>
+                           </a>
+                        </form>
+                        <p>좋아요 : ${mySimpleRecipe.likeCount}92 조회수
+                           :${mySimpleRecipe.postHits}431</p>
+                           <div id="score-callback" data-score="0" class="score-height"></div><!-- 추가되는포크. -->
+                        <form>
+                           <a type="button" id="insertRcipeBtn" class="info" style="text-decoration: none"
+                              href="javascript:insertScrap('RC1479145454147')">스크랩  추가</a>
+                        </form>
+                     </div>
+                  </div>
+
+							<div class="view view-first"
+								style="width: 300px; height: 240px; margin: 15px">
+								<img
+									src="http://cloudfront.haemukja.com/vh.php?url=http://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/14923/org_resized_____.JPG&convert=jpgmin&rt=600" />
+								<div class="mask">
+									<form method="post" action="detail" id="detail"
+										style="display: inline">
+										<a type="button" style="text-decoration: none"
+											href="javascript:detailSee('RC1479145336463')">
+											<h2>가성비 대박 부대찌개 집밥</h2>
+										</a>
+									</form>
+									<p>좋아요 : ${mySimpleRecipe.likeCount}14 조회수
+										:${mySimpleRecipe.postHits}221</p>
+									<div id="score-callback" data-score="0" class="score-height"></div>
+									<!-- 추가되는포크. -->
+									<form>
+										<a type="button" id="insertRcipeBtn" class="info"
+											style="text-decoration: none"
+											href="javascript:insertScrap('RC1479145336463')">스크랩 추가</a>
+									</form>
+								</div>
+							</div>
+
+
+						</div>
+						
+						<div class="view view-first"
+								style="width: 300px; height: 240px; margin: 15px">
+								<img
+									src="http://cloudfront.haemukja.com/vh.php?url=http://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/7434/org_resized_20150424_210606.jpg&convert=jpgmin&rt=600" />
+								<div class="mask">
+									<form method="post" action="detail" id="detail"
+										style="display: inline">
+										<a type="button" style="text-decoration: none"
+											href="javascript:detailSee('RC1479143596384')">
+											<h2>매콤한 열무비빔냉면 만들기</h2>
+										</a>
+									</form>
+									<p>좋아요 : ${mySimpleRecipe.likeCount}141 조회수
+										:${mySimpleRecipe.postHits}721</p>
+									<div id="score-callback" data-score="0" class="score-height"></div>
+									<!-- 추가되는포크. -->
+									<form>
+										<a type="button" id="insertRcipeBtn" class="info"
+											style="text-decoration: none"
+											href="javascript:insertScrap('RC1479143596384')">스크랩 추가</a>
+									</form>
+								</div>
+							</div>
+
+
+						</div>
+
+
+						<%-- </c:forEach> --%>
                </div>
             </div>
          </div>
